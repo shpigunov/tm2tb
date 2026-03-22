@@ -12,6 +12,8 @@ with open(f'{test_data_dir}/test_sentences.json', 'r', encoding='utf8') as fr:
     sentences = json.loads(fr.read())
 en_sentence = sentences['en']
 es_sentence = sentences['es']
+en_uk_sentence = sentences['en_uk']
+uk_sentence = sentences['uk']
 
 
 def int_keys_pairs_hook(pairs):
@@ -112,6 +114,20 @@ def test_en_text():
     terms = terms.to_dict()
     terms = _round(terms)
     assert terms == RESULTS[11]
+
+def test_uk_sentence():
+    """Test term extraction from Ukrainian sentence."""
+    extractor = TermExtractor(uk_sentence, lang='uk')
+    terms = extractor.extract_terms()
+    assert len(terms) > 0
+
+
+def test_bilingual_uk_en():
+    """Test bilingual term extraction from English/Ukrainian sentence pair."""
+    extractor = BitermExtractor((en_uk_sentence, uk_sentence), src_lang='en', tgt_lang='uk')
+    biterms = extractor.extract_terms()
+    assert len(biterms) > 0
+
 
 def test_es_text():
     """Test monolingual extraction from Spanish text."""
