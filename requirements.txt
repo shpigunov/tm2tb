@@ -15,4 +15,5 @@ https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-3.8.
 https://github.com/explosion/spacy-models/releases/download/de_core_news_md-3.8.0/de_core_news_md-3.8.0.tar.gz#egg=de_core_news_md
 https://github.com/explosion/spacy-models/releases/download/pt_core_news_md-3.8.0/pt_core_news_md-3.8.0.tar.gz#egg=pt_core_news_md
 https://github.com/explosion/spacy-models/releases/download/it_core_news_md-3.8.0/it_core_news_md-3.8.0.tar.gz#egg=it_core_news_mdhttps://github.com/explosion/spacy-models/releases/download/it_core_news_md-3.8.0/it_core_news_md-3.8.0.tar.gz#egg=it_core_news_md
+https://github.com/explosion/spacy-models/releases/download/it_core_news_md-3.8.0/it_core_news_md-3.8.0.tar.gz#egg=it_core_news_md
 https://github.com/explosion/spacy-models/releases/download/uk_core_news_md-3.8.0/uk_core_news_md-3.8.0.tar.gz#egg=uk_core_news_md
