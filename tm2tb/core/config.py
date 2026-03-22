@@ -1,7 +1,7 @@
 """
 spacy and transformer models and paths
 
-TM2TB comes with 6 spaCy language models (English, Spanish, German, French, Portuguese and Italian).
+TM2TB comes with 7 spaCy language models (English, Spanish, German, French, Portuguese, Italian and Ukrainian).
 
 In order to support additional languages, the corresponding spaCy model must be installed.
 Check the available spaCy language models here: https://spacy.io/models
@@ -14,6 +14,7 @@ import de_core_news_md
 import fr_core_news_md
 import pt_core_news_md
 import it_core_news_md
+import uk_core_news_md
 from sentence_transformers import SentenceTransformer
 
 
@@ -26,7 +27,8 @@ spacy_models = {
     'de': de_core_news_md.load(disable=disabled_comps),
     'fr': fr_core_news_md.load(disable=disabled_comps),
     'pt': pt_core_news_md.load(disable=disabled_comps),
-    'it': it_core_news_md.load(disable=disabled_comps)
+    'it': it_core_news_md.load(disable=disabled_comps),
+    'uk': uk_core_news_md.load(disable=disabled_comps)
     }
 
 print('Loading spacy models...')
@@ -57,7 +59,7 @@ def get_spacy_model(lang):
                     spacy.lang.it.Italian
     """
 
-    supported_languages = ['en', 'es', 'de', 'fr', 'pt', 'it']
+    supported_languages = ['en', 'es', 'de', 'fr', 'pt', 'it', 'uk']
     if lang not in supported_languages:
         raise ValueError(f"{lang} model has not been installed!")
     spacy_model = spacy_models[lang]
