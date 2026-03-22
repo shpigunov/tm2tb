@@ -4,3 +4,4 @@ tm2tb-env/
 data/
 *.ipynb
 
+/.venv
